@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+
+
+<VBox spacing="10" alignment="CENTER"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.grant.notesapp.ViewNotesController">
+
+    <ListView fx:id="notesList" prefWidth="300" prefHeight="200"/>
+
+
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Delete Note" onAction="#deleteSelectedNote"/>
+        <Button text="Create New Note" onAction="#goBack"/>
+    </HBox>
+
+
+
+</VBox>

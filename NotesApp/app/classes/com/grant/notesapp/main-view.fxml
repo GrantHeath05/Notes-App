@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+    Main Create Note Screen FXML file
+    Goal:
+        Two text boxes which take Title & Content
+        A button for saving the content of the text boxes
+        A button to switch the page to viewing notes
+ -->
+
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+
+
+<VBox spacing="10" alignment="CENTER"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.grant.notesapp.MainController">
+
+    <!-- The title of the note area -->
+    <TextField fx:id="titleField" promptText="Note Title" prefWidth="300"/>
+
+    <!-- Area where user types the actual note -->
+    <TextArea fx:id="noteArea" promptText="Write your note here..."
+              prefWidth="300" prefHeight="200"/>
+
+    <!-- Both buttons at the bottom center of the screen -->
+    <HBox spacing="10" alignment="CENTER">
+        <!-- Button for saving content -->
+        <Button text="Save Note" onAction="#saveNote"/>
+        <!-- Button for leaving page and viewing notes -->
+        <Button text="View Notes" onAction="#goToViewNotes"/>
+    </HBox>
+
+</VBox>
